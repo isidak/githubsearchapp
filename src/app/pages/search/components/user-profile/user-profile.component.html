@@ -1,0 +1,37 @@
+<div *ngIf="user" class="container">
+<div class="mt-5">
+  <table class="table-bordered">
+    <tbody>
+    <tr>
+      <th>User name:</th>
+      <td> {{user.name}} </td>
+    </tr>
+    <tr>
+      <th>Company:</th>
+      <td> {{user.company}} </td>
+    </tr>
+    <tr>
+      <th>Email:</th>
+      <td> {{user.email}} </td>
+    </tr>
+    <tr>
+      <th>Followers:</th>
+      <td> {{user.followers}} </td>
+    </tr>
+    <tr>
+      <th>Updated at:</th>
+      <td> {{user.updatedAt}} </td>
+    </tr>
+    <tr>
+      <th>Avatar URL:</th>
+      <td> {{user.avatarUrl}} </td>
+    </tr>
+    <tr>
+      <th>Repos URL:</th>
+      <td><a class="btn-link" (click)="openRepos(user.login)">{{user.reposUrl}}</a> </td>
+    </tr>
+    </tbody>
+
+  </table>
+</div>
+</div>

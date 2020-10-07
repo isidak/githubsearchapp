@@ -1,0 +1,26 @@
+<div class="container">
+<div class="row">
+<table class="table mt-3">
+  <tr>
+    <th>Repo name: <a (click)="sort('fullName')" class="btn-link">sort</a></th>
+    <th>Description <a (click)="sort('description')" class="btn-link">sort</a></th>
+    <th>Git Repo Url <a (click)="sort('gitUrl')" class="btn-link">sort</a></th>
+    <th>Forks count <a (click)="sort('forksCount')" class="btn-link">sort</a></th>
+    <th>Watchers count <a (click)="sort('watchersCount')" class="btn-link">sort</a></th>
+  </tr>
+  <tr *ngFor="let repo of currentUserReposList">
+    <td> {{repo.fullName}}</td>
+    <td> {{repo.description}}</td>
+    <td> {{repo.gitUrl}}</td>
+    <td> {{repo.forksCount}}</td>
+    <td> {{repo.watchersCount}}</td>
+  </tr>
+</table>
+
+  <div>
+    <a routerLink="/search" class="btn btn-secondary btn-block">Back to Search page</a>
+  </div>
+
+</div>
+</div>
+

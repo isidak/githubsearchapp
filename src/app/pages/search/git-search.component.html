@@ -1,0 +1,8 @@
+<app-search (search)="searchUsers($event)"></app-search>
+<div *ngIf="errorMessage">
+  {{errorMessage}}
+</div>
+<app-user-profile *ngIf="login" [user]="user$ | async"></app-user-profile>
+
+
+
